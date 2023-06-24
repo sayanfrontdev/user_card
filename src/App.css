@@ -1,38 +1,143 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  background-color: pink;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.round-img {
+  border-radius: 100%;
+  box-shadow: 7px 8px 9px 10px white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.userCardContainer {
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+  padding: 2rem;
+  display: flex;
+}
+.grid-2 {
+  display: flex;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+}
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+}
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+}
+.container{
+  width: 90px;
+  height: 50px;
+  background:black;
+  margin: 20px;
+  cursor: pointer;
+  border: 5px solid white;
+  border-radius: 15px;
+}
+.container span:hover{
+  color: #14ffe9;
+  background: black;
+  transition: .8s;
+}
+.container span{
+  display: inline-block;
+  background: #0e1538;
+  justify-content: center;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+
+}
+.div{
+  border-radius: 30%;
+  background-color: black;
+  margin-top: 10px;
+  border: 10px solid green;
+  cursor: pointer;
+}
+.div:hover{
+  border-radius: 9%;
+  background-color: lavender;
+  transform: scale(1.0) ;
+  color: black;
+}
+.round-img {
+  border-radius: 70%;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem 2rem;
+  z-index: 1;
+  width: 100%;
+  opacity: 0.9;
+  margin-bottom: 1rem;
+  height: 100px;
+}
+@media (max-width:768px){
+
+  html{
+      font-size: 60%;
   }
-  to {
-    transform: rotate(360deg);
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
   }
+  .userCardContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .userCardContainer .round-img{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    object-fit: cover;
+
+  }
+  .container span{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+
+  }
+  .div{
+    flex:1 1 30rem;
+    border-radius: .5rem;
+    overflow: hidden;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.3);
+  }
+  .navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem 2rem;
+    z-index: 1;
+    width: 100%;
+    opacity: 0.9;
+    margin-bottom: 1rem;
+    height: 100px;
+  }
+
 }
